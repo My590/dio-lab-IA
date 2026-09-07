@@ -1,149 +1,119 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤝 Elo — Agente Financeiro Inteligente
 
-## Contexto
+> Desafio de projeto DIO (Digital Innovation One): idealizar e prototipar um agente de IA Generativa capaz de antecipar necessidades financeiras, personalizar sugestões e ajudar no planejamento do cliente com segurança e sem alucinações.
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+## 💡 Sobre o Elo
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+O **Elo** é um agente financeiro conversacional criado para resolver um problema simples e comum: muitas pessoas têm dificuldade em organizar o que entra e o que sai do seu dinheiro.
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+Em vez de apenas responder perguntas, o Elo analisa os dados financeiros do cliente e gera **relatórios e gráficos simples** que ajudam no planejamento mensal ou anual, sempre de acordo com o perfil e os objetivos de quem está usando.
 
----
+**Público-alvo:** clientes de bancos ou instituições financeiras que precisam de um apoio acessível para entender e organizar sua vida financeira.
 
-## O Que Você Deve Entregar
+## 🎭 Persona
 
-### 1. Documentação do Agente
+| | |
+|---|---|
+| **Nome** | Elo |
+| **Personalidade** | Consultivo, amigável e direto — como um secretário de confiança |
+| **Tom de voz** | Formal, acessível e respeitoso |
 
-Defina **o que** seu agente faz e **como** ele funciona:
+**Exemplos de como o Elo fala:**
+- *Saudação:* "Olá! Sou Elo. Como posso ajudar com suas finanças hoje?"
+- *Confirmação:* "Certo. Posso te explicar de forma simples..."
+- *Limitação:* "Não tenho essa informação no momento, mas posso ajudar com..."
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+## 🏗️ Arquitetura
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
-
-```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+```mermaid
+flowchart TD
+    A[Cliente] -->|Mensagem| B[Interface - Streamlit]
+    B --> C[LLM - Ollama local]
+    C --> D[Base de Conhecimento - JSON/CSV]
+    D --> C
+    C --> E[Validação Anti-Alucinação]
+    E --> F[Resposta]
 ```
 
+| Componente | Descrição |
+|------------|-----------|
+| **Interface** | [Streamlit](https://streamlit.io/) |
+| **LLM** | [Ollama](https://ollama.com/) rodando localmente (modelo `llama3.2`) |
+| **Base de conhecimento** | Arquivos JSON/CSV com dados do cliente |
+| **Validação** | Regras de checagem contra alucinações no próprio prompt |
+
+O contexto do cliente (perfil, transações, histórico de atendimento e produtos financeiros disponíveis) é montado dinamicamente e injetado no prompt a cada pergunta feita ao modelo.
+
+## 📁 Base de conhecimento
+
+| Arquivo | Formato | Uso pelo agente |
+|---------|---------|------------------|
+| `data/perfil_investidor.json` | JSON | Personalizar interações conforme perfil e objetivos do cliente |
+| `data/transacoes.csv` | CSV | Analisar padrão de gastos e receitas |
+| `data/historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
+| `data/produtos_financeiros.json` | JSON | Apresentar produtos e considerações de risco/viabilidade compatíveis com o perfil |
+
+## 🔒 Segurança e anti-alucinação
+
+O Elo foi projetado com limites claros do que **não** deve fazer:
+
+- ❌ Não recomenda investimentos específicos (apenas comenta risco e viabilidade conforme o perfil)
+- ❌ Não acessa nem solicita dados sensíveis (senhas, cartões, etc.)
+- ❌ Não substitui profissionais da área financeira
+- ❌ Não gera vídeos, áudios ou imagens — apenas relatórios e gráficos
+- ✅ Sempre baseia as respostas nos dados fornecidos, admitindo quando não sabe algo
+- ✅ Redireciona a conversa ao tema financeiro quando ela foge do escopo
+
+## ⚙️ Como rodar o projeto
+
+### Pré-requisitos
+- [Python 3.10+](https://www.python.org/)
+- [Ollama](https://ollama.com/) instalado e rodando localmente
+- Modelo `llama3.2` baixado no Ollama
+
+### Passo a passo
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/My590/dio-lab-IA.git
+cd dio-lab-IA
+
+# 2. Instale as dependências
+pip install streamlit pandas requests
+
+# 3. Baixe o modelo do Ollama (caso ainda não tenha)
+ollama pull llama3.2
+
+# 4. Inicie o servidor do Ollama (se não estiver rodando)
+ollama serve
+
+# 5. Rode a aplicação
+cd src
+streamlit run app.py
+```
+
+A interface abrirá no navegador, pronta para conversar com o Elo.
+
+## 📂 Estrutura do projeto
+
+```
+dio-lab-IA/
+├── README.md
+├── assets/              # Roteiro e materiais de apoio do lab
+├── data/                # Base de conhecimento (JSON/CSV)
+├── docs/                # Documentação do agente, prompts, métricas e pitch
+├── examples/            # Referências de implementação
+└── src/
+    └── app.py           # Aplicação Streamlit do agente Elo
+```
+
+## 📊 Avaliação
+
+O agente foi testado com cenários como consulta de gastos, tentativa de recomendação de ativo específico, perguntas fora do escopo e informações inexistentes — em todos, o Elo respondeu de forma segura, admitindo limitações quando necessário.
+
+**Ponto forte:** admite quando não pode falar sobre algo ou não sabe.
+**Ponto de melhoria:** geração de gráficos ainda é lenta; tabelas são retornadas com mais agilidade.
+
 ---
 
-## Dicas Finais
-
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+Projeto desenvolvido como parte do desafio **"Bia do Futuro"** da [Digital Innovation One (DIO)](https://www.dio.me/).
