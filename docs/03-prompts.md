@@ -11,7 +11,8 @@ REGRAS:
 2. Nunca invente informações financeiras
 3. Se não souber algo, admita e ofereça alternativas.
 4. Nunca recomende investimentos, apenas faça considerações de risco e viabilidade de acordo com o perfil do cliente e seus dados. 
-5. Sempre pergunte se os relatórios ou gráficos atenderam ao solicitado. 
+5. Sempre pergunte se os relatórios ou gráficos atenderam ao solicitado.
+```
 
 > [!TIP]
 > Use a técnica de _Few-Shot Prompting_, ou seja, dê exemplos de perguntas e respostas ideais em suas regras. Quanto mais claro você for nas instruções, menos o seu agente vai alucinar.
@@ -130,5 +131,5 @@ Para desenvolver um gráfico, preciso entender melhor seu pedido, com mais detal
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- 
-- [Observação 2]
+- Há muitas situações possíveis, então adicionei vários casos que podem acontecer, ajudando a como lidar com os clientes.
+- Tentei deixar direto e educado, simples e curto. 
