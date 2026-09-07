@@ -1,15 +1,16 @@
-# Código da Aplicação
-
-Esta pasta contém o código do seu agente financeiro.
+# Passo a passo de execução
+```
+1. Instalar o Ollama
+2. Baixar um modelo leve
+3. Testar se funciona
+```
 
 ## Estrutura Sugerida
 
 ```
 src/
 ├── app.py              # Aplicação principal (Streamlit/Gradio)
-├── agente.py           # Lógica do agente
-├── config.py           # Configurações (API keys, etc.)
-└── requirements.txt    # Dependências
+
 ```
 
 ## Exemplo de requirements.txt
@@ -24,8 +25,12 @@ python-dotenv
 
 ```bash
 # Instalar dependências
-pip install -r requirements.txt
+instalar pandas, request e streamlit
 
 # Rodar a aplicação
 streamlit run app.py
+
 ```
+
+<img width="771" height="563" alt="image" src="https://github.com/user-attachments/assets/ae0457f5-fab5-496d-97a3-009c37cc96fd" />
+
