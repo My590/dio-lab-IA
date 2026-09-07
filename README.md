@@ -112,8 +112,5 @@ dio-lab-IA/
 O agente foi testado com cenários como consulta de gastos, tentativa de recomendação de ativo específico, perguntas fora do escopo e informações inexistentes — em todos, o Elo respondeu de forma segura, admitindo limitações quando necessário.
 
 **Ponto forte:** admite quando não pode falar sobre algo ou não sabe.
-**Ponto de melhoria:** geração de gráficos ainda é lenta; tabelas são retornadas com mais agilidade.
+**Ponto de melhoria:** geração de gráficos ainda é lenta; tabelas são retornadas com mais agilidade, então foi removido a geração de gráficos.
 
----
-
-Projeto desenvolvido como parte do desafio **"Bia do Futuro"** da [Digital Innovation One (DIO)](https://www.dio.me/).
