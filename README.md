@@ -114,3 +114,6 @@ O agente foi testado com cenários como consulta de gastos, tentativa de recomen
 **Ponto forte:** admite quando não pode falar sobre algo ou não sabe.
 **Ponto de melhoria:** geração de gráficos ainda é lenta; tabelas são retornadas com mais agilidade, então foi removido a geração de gráficos.
 
+## Vídeo Pitch
+Conheça mais sobre o projeto nesse vídeo.
+[Link](https://drive.google.com/file/d/1GPbbP3lI3g8-arZpWDaY9JG1CFuKH-NN/view?usp=sharing)
